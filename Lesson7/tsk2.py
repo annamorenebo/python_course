@@ -17,8 +17,8 @@ class Road:
     _length = 0
     _width = 0
 
-    mass_metr = 0
-    thickness = 0
+    mass_metr = 25
+    thickness = 0.05
 
     def __init__(self, length, width):
         self._length = int(length)
@@ -29,6 +29,4 @@ class Road:
 
 
 road = Road(5000, 20)
-road.mass_metr = 25
-road.thickness = 0.05
 print(f"Масса дорожного покрытия: {road.road_cover() / 1000} тонн")
