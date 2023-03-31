@@ -11,7 +11,20 @@
 """
 
 str_list = ['attribute', 'класс', 'функция', 'type']
+
 for s in str_list:
-    my_string = str(bytes(s, encoding='utf-8'))[2:-1]
-    if not my_string.isalpha():
-        print(s)
+    try:
+        my_string = str(bytes(s, encoding='utf-8'))[2:-1]
+        if not my_string.isalpha():
+            raise ValueError(f"слово ", {s}, " нельзя представить в байтовом формате")
+
+    except ValueError as err:
+        print(err)
+
+
+
+
+
+
+
+
